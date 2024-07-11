@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/global.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/assets/css/pages/register.css"
+        />
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+        <title>Login to TreeLine</title>
+    </head>
+    <body>
+        <script src="assets/js/pages/register.js"></script>
+        <div class="topo-pattern"></div>
+        <div class="login-box animate-entry">
+            <div>
+                <h1>Wilkommen 👋</h1>
+                <p>Erstelle dir hier ein TreeLine-Konto.</p>
+            </div>
+            <form id="register-form">
+                <div>
+                    <label for="display-name">Anzeigename</label>
+                    <input
+                        type="text"
+                        id="display-name"
+                        placeholder="Max Mustermann"
+                        required
+                    />
+                </div>
+                <div>
+                    <label for="username">Benutzername</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="treeline"
+                        required
+                    />
+                </div>
+                <div>
+                    <label for="password">Passwort</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="••••••••"
+                        required
+                    />
+                </div>
+                <div>
+                    <label for="password-confirm">Passwort bestätigen</label>
+                    <input
+                        type="password"
+                        id="password-confirm"
+                        placeholder="••••••••"
+                        required
+                    />
+                </div>
+                <a href="/login" class="login-register"
+                    >Du hast bereits ein Konto? Anmelden</a
+                >
+                <span class="component-divider"></span>
+                <button type="submit" class="button primary">
+                    Registrieren
+                </button>
+            </form>
+        </div>
+        <div class="component-logo animated absolute">
+            <img src="/assets/img/logo.svg" alt="Logo" />
+            <h2>TreeLine</h2>
+        </div>
+        <footer>
+            <p>Made with ❤️ by Elias, Larissa, Max, Moritz and Nina</p>
+        </footer>
+    </body>
+</html>

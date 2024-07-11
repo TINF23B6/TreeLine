@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TreeLine - Einstellungen</title>
+        <link rel="stylesheet" href="assets/css/global.css" />
+        <link rel="stylesheet" href="assets/css/pages/settings.css" />
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+    </head>
+    <body>
+        <script src="assets/js/pages/settings.js"></script>
+        <script src="assets/js/components/menus/avatarMenu.js"></script>
+        <script src="assets/js/components/avatar.js"></script>
+        <div class="topo-pattern"></div>
+        <div id="main-container">
+            <header>
+                <a href="/familytree" class="component-logo">
+                    <img alt="TreeLine Logo" src="/assets/img/logo.svg" />
+                    <h2>TreeLine</h2>
+                </a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/familytree">Stammbaum</a>
+                        </li>
+                        <li>
+                            <a class="selected" href="/settings"
+                                >Einstellungen</a
+                            >
+                        </li>
+                    </ul>
+                    <div class="backdrop"></div>
+                </nav>
+                <div
+                    onmouseenter="showAvatarMenu(this)"
+                    onmouseout="hideAvatarMenu(this)"
+                    id="user-avatar"
+                >
+                    <a>
+                        <div id="user-avatar-letter"></div>
+                    </a>
+                </div>
+            </header>
+            <main>
+                <h1>Einstellungen</h1>
+                <div class="form-grid">
+                    <!-- User Settings -->
+                    <form id="edit-user-form">
+                        <h2>Benutzer</h2>
+                        <div class="form-group">
+                            <label for="username">Anzeigename</label>
+                            <input
+                                type="text"
+                                placeholder="Max Mustermann"
+                                id="username"
+                                name="username"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Passwort</label>
+                            <input
+                                type="password"
+                                placeholder="••••••••••••••••"
+                                id="password"
+                                name="password"
+                            />
+                        </div>
+                        <button class="primary" type="submit">Speichern</button>
+                    </form>
+                    <!-- Family Management -->
+                    <div class="form-group">
+                        <form id="add-family-form">
+                            <h2>Familien bearbeiten</h2>
+                            <div class="form-group">
+                                <label for="family-name"
+                                    >Neue Familie hinzufügen</label
+                                >
+                                <div class="form-row">
+                                    <input
+                                        type="text"
+                                        placeholder="Namen der Familie eingeben"
+                                        id="family-name"
+                                        name="family"
+                                    />
+                                    <button class="primary">Hinzufügen</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="family-list"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

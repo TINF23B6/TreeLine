@@ -1,0 +1,47 @@
+services:
+    treeline:
+        container_name: treeline-app
+        image: ghcr.io/tinf23b6/treeline:latest
+        build:
+            context: .
+            dockerfile: docker/Dockerfile
+        ports:
+            - '8080:8080'
+        environment:
+            - MYSQL_HOST=db
+            - MYSQL_PORT=3306
+            - MYSQL_DATABASE=treeline
+            - MYSQL_USER=treeline
+            - MYSQL_PASSWORD=treeline
+        depends_on:
+            - db
+        restart: unless-stopped
+
+    db:
+        container_name: treeline-mysql
+        ports:
+            - '3306:3306'
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: treeline
+            MYSQL_USER: treeline
+            MYSQL_PASSWORD: treeline
+        volumes:
+            - ./mysql:/var/lib/mysql
+        restart: unless-stopped
+
+    # Optional (für Debugging / Entwicklung)
+    phpmyadmin:
+        container_name: treeline-phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - '8090:80'
+        environment:
+            PMA_HOST: db
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: treeline
+            MYSQL_PASSWORD: treeline
+        depends_on:
+            - db
+        restart: unless-stopped

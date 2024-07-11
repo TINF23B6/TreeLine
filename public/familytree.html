@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TreeLine</title>
+        <link rel="stylesheet" href="assets/css/global.css" />
+        <link rel="stylesheet" href="assets/css/pages/familytree.css" />
+        <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+    </head>
+    <body>
+        <script src="assets/js/pages/familytree.js"></script>
+        <script src="assets/js/components/popups/generic.js"></script>
+        <script src="assets/js/components/avatar.js"></script>
+        <script src="assets/js/components/popups/addNewChildPopup.js"></script>
+        <script src="assets/js/components/popups/addNewSpousePopup.js"></script>
+        <script src="assets/js/components/popups/editPopup.js"></script>
+        <script src="assets/js/components/menus/addNewMenu.js"></script>
+        <script src="assets/js/components/menus/avatarMenu.js"></script>
+        <div class="topo-pattern"></div>
+        <div id="main-container">
+            <header>
+                <a href="/familytree" class="component-logo">
+                    <img alt="TreeLine Logo" src="/assets/img/logo.svg" />
+                    <h2>TreeLine</h2>
+                </a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="selected" href="/familytree">Stammbaum</a>
+                        </li>
+                        <li><a href="/settings">Einstellungen</a></li>
+                    </ul>
+                    <div class="backdrop"></div>
+                </nav>
+                <div
+                    onmouseenter="showAvatarMenu(this)"
+                    onmouseout="hideAvatarMenu(this)"
+                    id="user-avatar"
+                >
+                    <a>
+                        <div id="user-avatar-letter"></div>
+                    </a>
+                </div>
+            </header>
+            <div id="controls">
+                <select id="family-select"></select>
+                <p id="person-count"></p>
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Suche nach Person"
+                />
+            </div>
+            <button onclick="resetZoom()" class="destructive" id="reset-zoom">
+                Zoom zurücksetzen
+            </button>
+            <div id="stammbaum-xslt-container">
+                <!-- Hier wird der Stammbaum mittels XSLT eingefügt -->
+            </div>
+        </div>
+    </body>
+</html>

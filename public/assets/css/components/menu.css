@@ -1,0 +1,23 @@
+.avatar-menu,
+.add-new-menu {
+    position: absolute;
+    top: -12.5%;
+    left: 80%;
+    width: 12.25rem;
+    padding: 1.25rem;
+    background: var(--background-color);
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    z-index: var(--z-popup);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.add-new-menu-item {
+    width: 100%;
+    z-index: var(--z-popup);
+}

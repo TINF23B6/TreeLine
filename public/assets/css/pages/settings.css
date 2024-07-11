@@ -1,0 +1,50 @@
+main {
+    padding: 6rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+#family-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.family-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.family-item input {
+    flex: 1;
+}

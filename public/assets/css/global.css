@@ -1,0 +1,131 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Components */
+@import url('/assets/css/components/avatar.css');
+@import url('/assets/css/components/button.css');
+@import url('/assets/css/components/divider.css');
+@import url('/assets/css/components/header.css');
+@import url('/assets/css/components/input.css');
+@import url('/assets/css/components/logo.css');
+@import url('/assets/css/components/menu.css');
+@import url('/assets/css/components/popup.css');
+@import url('/assets/css/components/select.css');
+@import url('/assets/css/components/typography.css');
+
+html,
+* {
+    font-family: Inter, sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.animate-entry {
+    opacity: 0;
+    filter: blur(var(--blur-acrylic));
+    -webkit-filter: blur(var(--blur-acrylic));
+    animation: animate-entry 1.5s ease-out forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-color);
+    }
+}
+
+/* Scrollbar color */
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+* {
+    scrollbar-color: var(--tertiary-color) transparent;
+}
+
+/* Topographic Pattern */
+.topo-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-background);
+    pointer-events: none;
+    background-image: url('/assets/img/pattern.svg');
+    opacity: 0.1;
+}
+
+:root {
+    /* Font Sizes */
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 2rem;
+    /* 
+	 * Colors
+	 */
+    --primary-color: rgb(15, 15, 15);
+    --secondary-color: rgb(33, 37, 41);
+    --tertiary-color: rgb(52, 58, 64);
+    --background-color: rgb(248, 249, 250);
+    --background-color-acrylic: rgba(248, 249, 250, 0.95);
+
+    --destructive-color: rgb(220, 38, 38);
+    --destructive-color-secondary: rgb(223, 59, 59);
+    --highlight-color: rgb(0, 123, 255);
+    /* Borders */
+    --border-color: rgb(229, 229, 229);
+    /* Text */
+    --text-color-primary: rgb(15, 15, 15);
+    --text-color-secondary: rgb(56, 60, 65);
+    --text-color-primary-inverted: rgb(248, 249, 250);
+    --text-color-secondary-inverted: rgb(153, 155, 157);
+    /* Z-Index */
+    --z-background: -1;
+    --z-connector-lines: 0;
+    --z-content: 1;
+    --z-controls: 5;
+    --z-header: 10;
+    --z-popup: 100;
+    --z-popup-content: 101;
+    /* Other */
+    --blur-acrylic: 4px;
+    --blur-lg: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* 
+        * Colors
+        */
+        --primary-color: rgb(248, 249, 250);
+        --secondary-color: rgb(233, 236, 239);
+        --tertiary-color: rgb(241, 243, 245);
+        --background-color: rgb(0, 0, 0);
+        --background-color-acrylic: rgba(0, 0, 0, 0.8);
+
+        --destructive-color: rgb(127, 29, 29);
+        --destructive-color-secondary: rgb(115, 27, 27);
+        /* Borders */
+        --border-color: rgb(38, 38, 38);
+        /* Text */
+        --text-color-primary: rgb(248, 249, 250);
+        --text-color-secondary: rgb(153, 155, 157);
+        --text-color-primary-inverted: rgb(15, 15, 15);
+        --text-color-secondary-inverted: rgb(56, 60, 65);
+    }
+}

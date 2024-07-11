@@ -1,0 +1,20 @@
+/**
+ * PATCH: /api/family/:id
+ * Modify a family
+ */
+const xml2js = require('xml2js')
+
+module.exports = function (app, connection) {
+    app.patch('/api/family/:id', (req, res) => {
+        const family = req.body.family
+        connection.query(
+            `UPDATE family SET name = '${family.name[0]}' WHERE id = ${req.params.id}`,
+            (err, _) => {
+                if (err) {
+                    throw err
+                }
+                res.send('Familie umbenannt!')
+            }
+        )
+    })
+}

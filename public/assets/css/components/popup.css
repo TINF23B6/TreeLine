@@ -1,0 +1,141 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(var(--blur-acrylic));
+    -webkit-backdrop-filter: blur(var(--blur-acrylic));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: popup-entry-overlay 0.25s ease-in-out;
+    z-index: var(--z-popup);
+}
+
+.popup .content {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    min-width: 42rem;
+    max-width: 90%;
+    min-height: 28rem;
+    max-height: 70%;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: popup-entry-content 0.25s ease-in-out;
+    z-index: var(--z-popup-content);
+    font-size: 14px;
+}
+
+.popup .button-row {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+}
+
+.popup .button-row button[type='submit'] {
+    width: 100%;
+}
+
+.popup .button-row button[type='button'] {
+    width: 30%;
+}
+
+.popup .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.popup .popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.popup .popup-form label {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.close {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .close {
+        filter: invert(1);
+    }
+}
+
+/* Entry animation */
+@keyframes popup-entry-content {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+        filter: blur(var(--blur-acrylic));
+        -webkit-filter: blur(var(--blur-acrylic));
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+}
+
+@keyframes popup-entry-overlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Exit animation */
+@keyframes popup-exit-content {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+        filter: blur(var(--blur-acrylic));
+        --webkit-filter: blur(var(--blur-acrylic));
+    }
+}
+
+@keyframes popup-exit-overlay {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.image-upload {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.image-upload input {
+    width: 100%;
+}

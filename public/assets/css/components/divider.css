@@ -1,0 +1,6 @@
+.component-divider {
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    margin: 4px 0;
+}

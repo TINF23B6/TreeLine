@@ -1,0 +1,8 @@
+.env
+node_modules
+.vscode
+.github
+docs
+.gitignore
+README.md
+*.code-workspace

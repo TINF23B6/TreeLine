@@ -1,0 +1,36 @@
+h1 {
+    font-size: var(--font-3xl);
+}
+
+h2 {
+    font-size: var(--font-2xl);
+}
+
+h3 {
+    font-size: var(--font-xl);
+}
+
+h4 {
+    font-size: var(--font-lg);
+}
+
+h5 {
+    font-size: var(--font-md);
+}
+
+/* Colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: var(--text-color-primary);
+}
+
+a,
+p,
+span {
+    color: var(--text-color-secondary);
+}

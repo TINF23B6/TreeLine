@@ -6,9 +6,10 @@
 
 module.exports = function (app, connection) {
     app.post('/api/family', (req, res) => {
-        const family = req.body.family
         const userId = req.session.userId
-
+        if (!userId) { return res.status(401).send('Unauthorized') }
+        const family = req.body.family
+        
         if (!family.name) {
             res.status(400)
             res.send('Error: Family name is required')

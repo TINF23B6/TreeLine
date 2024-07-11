@@ -5,7 +5,7 @@
 
 module.exports = function (app, connection) {
     app.delete('/api/person/:id', (req, res) => {
-        // Check if person doesnt have any children (parent_id and parent_id_2 are null)
+        if (!req.session.userId) { return res.status(401).send('Unauthorized') }
         connection.query(
             `SELECT * FROM Person WHERE parent_id_1 = ${req.params.id} OR parent_id_2 = ${req.params.id}`,
             (err, results) => {

@@ -6,12 +6,10 @@ const bcrypt = require('bcrypt')
 
 module.exports = function (app, connection) {
     app.patch('/api/user/', (req, res) => {
-        const user = req.body.user
         const userId = req.session.userId
-        if (!userId) {
-            res.status(401).send('Not logged in')
-            return
-        }
+        if (!userId) { return res.status(401).send('Unauthorized') }
+        const user = req.body.user
+
         const display_name = user.display_name[0]
         const password = user.password ? user.password[0] : null
         if (password) {

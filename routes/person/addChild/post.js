@@ -6,6 +6,7 @@
 
 module.exports = function (app, connection) {
     app.post('/api/person/addChild', (req, res) => {
+        if (!req.session.userId) { return res.status(401).send('Unauthorized') }
         const person = req.body.person
 
         // If parent_id_1 or parent_id_2 are not provided, return an error

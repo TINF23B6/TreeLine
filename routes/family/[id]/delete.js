@@ -5,6 +5,7 @@
 
 module.exports = function (app, connection) {
     app.delete('/api/family/:id', (req, res) => {
+        if (!req.session.userId) { return res.status(401).send('Unauthorized') }
         const id = req.params.id
         const sql = `SET FOREIGN_KEY_CHECKS = 0;`
         connection.query(sql, (err, _) => {

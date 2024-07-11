@@ -6,6 +6,7 @@ const xml2js = require('xml2js')
 
 module.exports = function (app, connection) {
     app.get('/api/family/:id', (req, res) => {
+        if (!req.session.userId) { return res.status(401).send('Unauthorized') }
         connection.query(
             `SELECT * FROM Family WHERE id = ${req.params.id}`,
             (err, results) => {

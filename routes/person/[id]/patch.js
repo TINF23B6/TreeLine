@@ -8,7 +8,7 @@ module.exports = function (app, connection) {
     app.patch('/api/person/:id', (req, res) => {
         const person = req.body.person
         connection.query(
-            `UPDATE person SET first_name = '${person.first_name[0]}', last_name = '${person.last_name[0]}', birth_year = ${person.birth_year[0]}, death_year = ${person.death_year[0] || null} ${person.image ? `, image = '${person.image}'` : ''}  WHERE id = ${req.params.id}`,
+            `UPDATE Person SET first_name = '${person.first_name[0]}', last_name = '${person.last_name[0]}', birth_year = ${person.birth_year[0]}, death_year = ${person.death_year[0] || null} ${person.image ? `, image = '${person.image}'` : ''}  WHERE id = ${req.params.id}`,
             (err, _) => {
                 if (err) {
                     throw err

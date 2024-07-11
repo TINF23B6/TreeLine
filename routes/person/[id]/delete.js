@@ -7,7 +7,7 @@ module.exports = function (app, connection) {
     app.delete('/api/person/:id', (req, res) => {
         // Check if person doesnt have any children (parent_id and parent_id_2 are null)
         connection.query(
-            `SELECT * FROM person WHERE parent_id_1 = ${req.params.id} OR parent_id_2 = ${req.params.id}`,
+            `SELECT * FROM Person WHERE parent_id_1 = ${req.params.id} OR parent_id_2 = ${req.params.id}`,
             (err, results) => {
                 if (err) {
                     throw err
@@ -20,7 +20,7 @@ module.exports = function (app, connection) {
                     )
                 } else {
                     connection.query(
-                        `DELETE FROM person WHERE id = ${req.params.id}`,
+                        `DELETE FROM Person WHERE id = ${req.params.id}`,
                         (err, _) => {
                             if (err) {
                                 throw err

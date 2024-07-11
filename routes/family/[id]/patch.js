@@ -8,7 +8,7 @@ module.exports = function (app, connection) {
     app.patch('/api/family/:id', (req, res) => {
         const family = req.body.family
         connection.query(
-            `UPDATE family SET name = '${family.name[0]}' WHERE id = ${req.params.id}`,
+            `UPDATE Family SET name = '${family.name[0]}' WHERE id = ${req.params.id}`,
             (err, _) => {
                 if (err) {
                     throw err

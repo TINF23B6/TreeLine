@@ -14,7 +14,7 @@ module.exports = function (app, connection) {
 
         // Check if the username already exists
         connection.query(
-            'SELECT * FROM user WHERE name = ?',
+            'SELECT * FROM User WHERE name = ?',
             [name.toLowerCase()],
             (err, rows) => {
                 if (err) throw err
@@ -31,7 +31,7 @@ module.exports = function (app, connection) {
                     bcrypt.hash(password, 10, (err, hash) => {
                         if (err) throw err
                         connection.query(
-                            'INSERT INTO user (display_name, name, password) VALUES (?, ?, ?)',
+                            'INSERT INTO User (display_name, name, password) VALUES (?, ?, ?)',
                             [display_name, name.toLowerCase(), hash],
                             (err, _) => {
                                 if (err) {

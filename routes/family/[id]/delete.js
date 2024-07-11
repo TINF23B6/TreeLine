@@ -14,7 +14,7 @@ module.exports = function (app, connection) {
                 res.send('Fehler beim Löschen der Familie')
                 return
             }
-            const sql = `DELETE FROM person WHERE family_id = ${id}`
+            const sql = `DELETE FROM Person WHERE family_id = ${id}`
             connection.query(sql, (err, _) => {
                 if (err) {
                     res.status(500)
@@ -22,7 +22,7 @@ module.exports = function (app, connection) {
                     res.send('Fehler beim Löschen der Familie')
                     return
                 }
-                const sql = `DELETE FROM family WHERE id = ${id}`
+                const sql = `DELETE FROM Family WHERE id = ${id}`
                 connection.query(sql, (err, _) => {
                     if (err) {
                         res.status(500)

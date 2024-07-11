@@ -18,7 +18,7 @@ module.exports = function (app, connection) {
             bcrypt.hash(password, 10, (err, hash) => {
                 if (err) throw err
                 connection.query(
-                    `UPDATE user SET display_name = '${display_name}', password = '${hash}' WHERE user_id = ${userId}`,
+                    `UPDATE User SET display_name = '${display_name}', password = '${hash}' WHERE user_id = ${userId}`,
                     (err, _) => {
                         if (err) {
                             throw err
@@ -33,7 +33,7 @@ module.exports = function (app, connection) {
             })
         } else {
             connection.query(
-                `UPDATE user SET display_name = '${display_name}' WHERE user_id = ${userId}`,
+                `UPDATE User SET display_name = '${display_name}' WHERE user_id = ${userId}`,
                 (err, _) => {
                     if (err) {
                         throw err

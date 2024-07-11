@@ -10,7 +10,7 @@ module.exports = function (app, connection) {
         const name = user.name[0]
         const password = user.password[0]
         connection.query(
-            'SELECT * FROM user WHERE name = ?',
+            'SELECT * FROM User WHERE name = ?',
             [name],
             (err, results) => {
                 if (err) throw err

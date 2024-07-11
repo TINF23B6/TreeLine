@@ -7,7 +7,7 @@ const xml2js = require('xml2js')
 module.exports = function (app, connection) {
     app.get('/api/person/:id', (req, res) => {
         connection.query(
-            `SELECT * FROM person WHERE id = ${req.params.id}`,
+            `SELECT * FROM Person WHERE id = ${req.params.id}`,
             (err, results) => {
                 if (err) {
                     throw err

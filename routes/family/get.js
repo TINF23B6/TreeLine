@@ -10,7 +10,7 @@ module.exports = function (app, connection) {
         const userId = req.session.userId
 
         connection.query(
-            'SELECT * FROM family WHERE user_id = ?',
+            'SELECT * FROM Family WHERE user_id = ?',
             [userId],
             (err, results) => {
                 if (err) {

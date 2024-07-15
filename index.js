@@ -74,6 +74,10 @@ function connectWithRetry(attemptsLeft = maxRetries) {
             user: process.env.MYSQL_USER,
             password: process.env.MYSQL_PASSWORD,
             database: process.env.MYSQL_DATABASE,
+            enableKeepAlive: true,
+            keepAliveInitialDelay: 5000,
+            maxIdle: 0,
+            idleTimeout: 300000,
         })
 
         connection.connect((err) => {

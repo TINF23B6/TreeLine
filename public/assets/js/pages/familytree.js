@@ -162,8 +162,7 @@ function resetZoom() {
     const stammbaumContainer = document.getElementById(
         'stammbaum-xslt-container'
     )
-    stammbaumContainer.style.transform = 'scale(1)'
-    stammbaumContainer.style.transformOrigin = '50% 50%'
+    stammbaumContainer.style.zoom = window.familyTreeScale
     document.getElementById('reset-zoom').style.display = 'none'
 }
 

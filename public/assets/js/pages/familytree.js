@@ -149,8 +149,7 @@ function handleZoom(event) {
         newScale = Math.round(newScale * 100) / 100
         if (newScale !== window.familyTreeScale) {
             window.familyTreeScale = newScale
-            stammbaumContainer.style.transform = `scale(${window.familyTreeScale})`
-            stammbaumContainer.style.transformOrigin = `${originX}% ${originY}%`
+            stammbaumContainer.style.zoom = window.familyTreeScale
         }
     }
 }

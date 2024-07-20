@@ -20,6 +20,7 @@ function handleSubmit(event) {
     // Send POST request to server
     const xml = `
     <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE user SYSTEM "user.dtd">
     <user>
         <display_name>${display_name}</display_name>
         <name>${name}</name>

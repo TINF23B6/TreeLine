@@ -92,6 +92,7 @@ async function submitAddSpouseForm(e, id) {
 async function submitAddSpouse(data) {
     const xml = `
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE person SYSTEM "person_add_spouse.dtd">
 <person>
     <first_name>${data.first_name}</first_name>
     <last_name>${data.last_name}</last_name>

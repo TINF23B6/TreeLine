@@ -1,0 +1,3 @@
+<!ELEMENT user (display_name, password?)>
+<!ELEMENT display_name (#PCDATA)>
+<!ELEMENT password (#PCDATA)>

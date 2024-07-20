@@ -104,6 +104,7 @@ function openAddNewChildPopup(id) {
 async function submitAddChild(data) {
     const xml = `
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE person SYSTEM "person_add_child.dtd">
 <person>
     <first_name>${data.first_name}</first_name>
     <last_name>${data.last_name}</last_name>

@@ -1,0 +1,7 @@
+<!ELEMENT person (first_name, last_name, birth_year, death_year?, parent_id, image)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT birth_year (#PCDATA)>
+<!ELEMENT death_year (#PCDATA)>
+<!ELEMENT parent_id (#PCDATA)>
+<!ELEMENT image (#PCDATA)>

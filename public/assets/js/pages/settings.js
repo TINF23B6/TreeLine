@@ -57,6 +57,7 @@ function updateFamily(id) {
     const name = input.value
     const xml = `
 	<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE user SYSTEM "family_name.dtd">
 	<family>
 		<name>${name}</name>
 	</family>
@@ -86,6 +87,7 @@ function addFamily(event) {
     input.value = ''
     const xml = `
 	<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE user SYSTEM "family_name.dtd">
 	<family>
 		<name>${name}</name>
 	</family>
@@ -132,6 +134,7 @@ function updateUser(event) {
     const display_name = input.value
     const xml = `
     <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE user SYSTEM "user.dtd">
     <user>
         <display_name>${display_name}</display_name>
         ${password ? `<password>${password}</password>` : ''}

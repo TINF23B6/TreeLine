@@ -9,6 +9,8 @@ function handleSubmit(event) {
     const username = document.getElementById('username').value
     const password = document.getElementById('password').value
     const xml = `
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE user SYSTEM "user.dtd">
 		<user>
 			<name>${username}</name>
 			<password>${password}</password>

@@ -90,8 +90,7 @@ async function submitAddSpouseForm(e, id) {
  * @param {object} data - The add spouse data.
  */
 async function submitAddSpouse(data) {
-    const xml = `
-<?xml version="1.0" encoding="UTF-8"?>
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE person SYSTEM "person_add_spouse.dtd">
 <person>
     <first_name>${data.first_name}</first_name>

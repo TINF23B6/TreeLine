@@ -135,8 +135,7 @@ function createPopupHTML(person) {
  */
 function submitPersonUpdate(id, data) {
     // Transform data back to XML
-    const xml = `
-<?xml version="1.0" encoding="UTF-8"?>
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE person SYSTEM "person_edit.dtd">
 <person>
     <first_name>${data.first_name}</first_name>

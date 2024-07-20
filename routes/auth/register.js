@@ -19,8 +19,7 @@ module.exports = function (app, connection) {
             (err, rows) => {
                 if (err) throw err
                 if (rows.length > 0) {
-                    res.send(
-                        `<?xml version="1.0" encoding="UTF-8"?>
+                    res.send(`<?xml version="1.0" encoding="UTF-8"?>
                         <response>
                             <success>false</success>
                             <message>Der Benutzername existiert bereits.</message>
@@ -36,16 +35,14 @@ module.exports = function (app, connection) {
                             (err, _) => {
                                 if (err) {
                                     console.log(err)
-                                    res.send(
-                                        `<?xml version="1.0" encoding="UTF-8"?>
+                                    res.send(`<?xml version="1.0" encoding="UTF-8"?>
                                         <response>
                                             <success>false</success>
                                             <message>Ein Fehler ist aufgetreten.</message>
                                         </response>`
                                     )
                                 } else {
-                                    res.send(
-                                        `<?xml version="1.0" encoding="UTF-8"?>
+                                    res.send(`<?xml version="1.0" encoding="UTF-8"?>
                                         <response>
                                             <success>true</success>
                                             <message>Nutzer erfolgreich registriert. Bitte melde dich mit deinen Anmeldedaten an.</message>

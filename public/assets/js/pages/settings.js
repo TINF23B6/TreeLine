@@ -55,8 +55,7 @@ function deleteFamily(id) {
 function updateFamily(id) {
     const input = document.getElementById(`family-${id}`)
     const name = input.value
-    const xml = `
-	<?xml version="1.0" encoding="UTF-8"?>
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE user SYSTEM "family_name.dtd">
 	<family>
 		<name>${name}</name>
@@ -85,8 +84,7 @@ function addFamily(event) {
     const input = document.getElementById('family-name')
     const name = input.value
     input.value = ''
-    const xml = `
-	<?xml version="1.0" encoding="UTF-8"?>
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE user SYSTEM "family_name.dtd">
 	<family>
 		<name>${name}</name>
@@ -132,8 +130,7 @@ function updateUser(event) {
     const input = document.getElementById('username')
     const password = document.getElementById('password').value
     const display_name = input.value
-    const xml = `
-    <?xml version="1.0" encoding="UTF-8"?>
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE user SYSTEM "user.dtd">
     <user>
         <display_name>${display_name}</display_name>

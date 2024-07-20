@@ -22,16 +22,14 @@ module.exports = function (app, connection) {
                             req.session.userId = user.user_id
                             req.session.name = user.name
                             req.session.displayName = user.display_name
-                            res.send(`
-                            <?xml version="1.0" encoding="UTF-8"?>
+                            res.send(`<?xml version="1.0" encoding="UTF-8"?>
                             <!DOCTYPE response SYSTEM "response.dtd">
                             <response>
                                 <success>true</success>
                                 <message>Benutzer erfolgreich angemeldet</message>
                             </response>`)
                         } else
-                            res.send(`
-                            <?xml version="1.0" encoding="UTF-8"?>
+                            res.send(`<?xml version="1.0" encoding="UTF-8"?>
                             <!DOCTYPE response SYSTEM "response.dtd">
                             <response>
                                 <success>false</success>
@@ -39,8 +37,7 @@ module.exports = function (app, connection) {
                             </response>`)
                     })
                 } else {
-                    res.send(`
-                    <?xml version="1.0" encoding="UTF-8"?>
+                    res.send(`<?xml version="1.0" encoding="UTF-8"?>
                     <!DOCTYPE response SYSTEM "response.dtd">
                     <response>
                         <success>false</success>

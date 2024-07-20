@@ -21,8 +21,7 @@ module.exports = function (app, connection) {
                         if (err) {
                             throw err
                         }
-                        res.send(`
-                            <?xml version="1.0" encoding="UTF-8"?>
+                        res.send(`<?xml version="1.0" encoding="UTF-8"?>
                             <!DOCTYPE response SYSTEM "response.dtd">
                             <response>
                                 <success>true</success>
@@ -38,8 +37,7 @@ module.exports = function (app, connection) {
                     if (err) {
                         throw err
                     }
-                    res.send(`
-                        <?xml version="1.0" encoding="UTF-8"?>
+                    res.send(`<?xml version="1.0" encoding="UTF-8"?>
                         <!DOCTYPE response SYSTEM "response.dtd">
 						<response>
 							<success>true</success>

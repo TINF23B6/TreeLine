@@ -22,6 +22,8 @@ module.exports = function (app, connection) {
                             throw err
                         }
                         res.send(`
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <!DOCTYPE response SYSTEM "response.dtd">
                             <response>
                                 <success>true</success>
                                 <message>Nutzer erfolgreich aktualisiert</message>
@@ -37,6 +39,8 @@ module.exports = function (app, connection) {
                         throw err
                     }
                     res.send(`
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <!DOCTYPE response SYSTEM "response.dtd">
 						<response>
 							<success>true</success>
 							<message>Nutzer erfolgreich aktualisiert</message>

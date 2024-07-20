@@ -1,0 +1,3 @@
+<!ELEMENT response (success, message)>
+<!ELEMENT success (#PCDATA)>
+<!ELEMENT message (#PCDATA)>

@@ -13,7 +13,11 @@ module.exports = function (app, connection) {
                 if (err) {
                     throw err
                 }
-                const builder = new xml2js.Builder()
+                const builder = new xml2js.Builder({
+                    doctype: {
+                        sysID: 'stammbaum_people.dtd',
+                    },
+                });
                 const xml = builder.buildObject({
                     stammbaum: { person: results },
                 })

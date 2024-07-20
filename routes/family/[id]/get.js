@@ -13,7 +13,11 @@ module.exports = function (app, connection) {
                 if (err) {
                     throw err
                 }
-                const builder = new xml2js.Builder()
+                const builder = new xml2js.Builder({
+                    doctype: {
+                        sysID: 'family.dtd',
+                    },
+                });
                 const xml = builder.buildObject({ family: results[0] })
                 res.send(xml)
             }

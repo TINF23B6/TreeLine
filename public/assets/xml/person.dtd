@@ -1,0 +1,12 @@
+<!ELEMENT person (id, first_name, last_name, birth_year, death_year?, family_id, parent_id_1?, parent_id_2?, spouse_id?, root_person, image)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT birth_year (#PCDATA)>
+<!ELEMENT death_year (#PCDATA)>
+<!ELEMENT family_id (#PCDATA)>
+<!ELEMENT parent_id_1 (#PCDATA)>
+<!ELEMENT parent_id_2 (#PCDATA)>
+<!ELEMENT spouse_id (#PCDATA)>
+<!ELEMENT root_person (#PCDATA)>
+<!ELEMENT image (#PCDATA)>

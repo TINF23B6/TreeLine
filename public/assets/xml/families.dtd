@@ -1,0 +1,5 @@
+<!ELEMENT families (family+)>
+<!ELEMENT family (id, name, user_id)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT user_id (#PCDATA)>

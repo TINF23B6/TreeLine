@@ -23,12 +23,16 @@ module.exports = function (app, connection) {
                             req.session.name = user.name
                             req.session.displayName = user.display_name
                             res.send(`
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <!DOCTYPE response SYSTEM "response.dtd">
                             <response>
                                 <success>true</success>
                                 <message>Benutzer erfolgreich angemeldet</message>
                             </response>`)
                         } else
                             res.send(`
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <!DOCTYPE response SYSTEM "response.dtd">
                             <response>
                                 <success>false</success>
                                 <message>Benutzername oder Passwort falsch</message>
@@ -36,6 +40,8 @@ module.exports = function (app, connection) {
                     })
                 } else {
                     res.send(`
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <!DOCTYPE response SYSTEM "response.dtd">
                     <response>
                         <success>false</success>
                         <message>Nutzer nicht gefunden</message>
